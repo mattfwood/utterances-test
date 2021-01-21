@@ -1,6 +1,6 @@
-import { BaseStyles, Button, Flex, Heading } from '@primer/components'
+import { BaseStyles, Button, Flex, Heading } from '@primer/components';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import '../styles/globals.css'
+import '../styles/globals.css';
 import { Container } from '.';
 import Link from 'next/link';
 
@@ -19,20 +19,25 @@ function MyApp({ Component, pageProps }) {
         <Container>
           <Flex alignItems="center" justifyContent="space-between">
             <Link href="/">
-            <a>
-              <Heading as="h1">Message Bored</Heading>
-            </a>
-          </Link>
-        <Button as="a" href="https://github.com/mattfwood/utterances-test/issues/new" target="_blank" rel="noopener">
-          Create Post
-        </Button>
+              <a>
+                <Heading as="h1">Message Bored</Heading>
+              </a>
+            </Link>
+            <Button
+              as="a"
+              href="https://github.com/mattfwood/utterances-test/issues/new"
+              target="_blank"
+              rel="noopener"
+            >
+              Create Post
+            </Button>
           </Flex>
 
           <Component {...pageProps} />
         </Container>
       </BaseStyles>
     </ApolloProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
